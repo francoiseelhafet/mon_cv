@@ -1,0 +1,1056 @@
+
+/*------corp-de-page-------------------------------------corp-de-page----------corp-de-page-*/
+*{
+    box-sizing: border-box;
+}
+/*  */
+body 
+{
+    box-sizing: border-box;
+    font-family: raleway ,sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    min-width: 801px;
+    max-width: 1000px;
+    background-color: antiquewhite;
+    border: black 3px solid;
+    font-weight: bold;
+    animation: apparition 10s ease-out;        
+} 
+/* effet apparition de la page d'accueil */
+@keyframes apparition{
+    from{
+        opacity:0;
+        transform:translateY(-100px);
+    }
+    to{
+        opacity: 1;
+        transform:translateY(0px);
+    }
+}
+/*  bonjour et spinner */
+.welcome{
+    background-color: #ffffff;
+    height:100vh;        /*-------toute la taille de l'ecran------------*/
+  
+    position: fixed;        /*-------ne bouge plus------------*/
+      
+    inset: 0;        /*-------remplace top/right/bottom/left------------*/
+  
+    z-index: 1;        /*-------position/superposition------------*/
+  
+    opacity: 0.9;        /*-------transparance------------*/
+  
+    animation:disappear 7s forwards 2s;        /*-------durée d'apparition------------*/
+      
+    transform-origin: top; /*-------disparition vers le haut------------*/  
+  }
+  @keyframes disappear{
+    0%{
+        transform: scale(1);/*-------commence------------*/
+    }
+    100%{
+        transform: scale(0);/*-------termine------------*/
+    }
+}
+  /*  */
+::after{
+      content: " ";
+      
+  }
+  /* conteneur lettre bonjour */
+.welcome__box{
+    position :fixed;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px; 
+   }
+   /* lettre bonjour */
+.lettre{
+    color:#484848;
+    font-size:80px;
+    letter-spacing: 10px;  /*-------espace entre les lettre------------*/
+    animation: flash 1.2s linear infinite; /*-------flash 1,2seconde linear infinit------------*/
+    position: relative;  
+    z-index: 4  ;
+    font-weight: bold;
+    color: rosybrown;
+}
+/* animation couleurs et ombre des lettres */
+@keyframes flash{
+    0%{
+        color: rosybrown;
+        text-shadow: 0 0 7px black;
+    }
+    90%{
+        color:#484848;
+        text-shadow: none;
+    }
+    /* delai effet des lettres */
+}
+/* effet décalé des lettres */
+.lettre:nth-child(1){ /*------1er enfant de lettre------------*/
+    animation-delay: 0.1s;/*-------delai 1seconde ------------*/
+}
+.lettre:nth-child(2){ 
+    animation-delay: 0.2s;
+   }
+.lettre:nth-child(3){ 
+    animation-delay: 0.3s;
+   }
+.lettre:nth-child(4){ 
+    animation-delay: 0.4s;
+   }
+.lettre:nth-child(5){ 
+    animation-delay: 0.5s;
+   }
+.lettre:nth-child(6){ 
+    animation-delay: 0.6s;
+   }
+.lettre:nth-child(7){ 
+    animation-delay: 0.7s;
+   }
+.lettre:nth-child(8){ 
+    animation-delay: 0.8s;
+   }
+.lettre:nth-child(9){ 
+    animation-delay: 0.9s;
+   }
+.lettre:nth-child(10){ 
+    animation-delay: 10s;
+   }
+
+   /* spinner */
+.welcome__loader{
+    margin: auto;
+    border: 16px solid #bdc3c7;
+    width:120px;
+    height:120px;
+    border-top-color: #1abc9c;
+    border-bottom-color:#3498bd;
+    border-radius: 50%;
+    animation: spinner 6s linear infinite;       /*-------combinaison animation linear durée------------*/
+    position: fixed;
+    inset:0;
+    display: grid;
+    place-items: center;
+    z-index: 2;
+}
+/* couleur et option de rotation */
+@keyframes spinner {
+    0%{
+        transform: rotate(0deg) scale(1);       /*-------rotation echelle 1------------*/
+        border-top-color:rgb(175, 66, 157);
+        border-bottom-color:rgb(175, 66, 157)ed;
+    }
+    25%{
+        border-top-color:rgb(89, 177, 228);       /*-------changement de couleur------------*/
+        border-bottom-color:rgb(89, 177, 228);
+    }
+    50%{
+        transform: rotate(360deg) scale(1.15);       /*-------1 tour et echelle 15%------------*/
+        border-top-color:rgb(175, 66, 157);
+        border-bottom-color:rgb(175, 66, 157);
+    }
+    75%{
+        border-top-color:green;
+        border-bottom-color:green;       /*-------changement de couleur------------*/
+    }
+    100%{
+        transform: rotate(720deg) scale(1);       /*-------2 tour echelle 1------------*/
+        border-top-color:red;
+        border-bottom-color:red;
+    }
+}
+/*-----------------------header/entête-----------------header/entête---------------header/entête-------------*/
+.head
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background-color: rosybrown;
+    height: auto;
+    animation: headcolor 60s linear infinite;
+    padding-left: 70px;
+}
+/* changement header au clic */
+.head:active{
+        background-color: rgb(26, 198, 201);
+        transition-delay: 0, 150ms;
+        transition: transform linear;
+}
+    /*animation changement de couleur auto */
+@keyframes headcolor{
+    0%{
+        background-color: rosybrown;
+    }
+
+    50%{
+        background-color: rosybrown;
+    }
+    55%{
+        background-color: rgb(26, 198, 201);
+    }
+    100%{
+        background-color: rgb(26, 198, 201);
+    }
+}
+/*-------box photo entete----------*/
+/* changement opacité photo au survol */
+.head__img:hover{
+    opacity: 0.5;
+}
+/* photo entete */
+.head__img__png
+{
+    width: 150px;
+    height: 150px;
+    object-fit: fill;
+    object-position: bottom;
+    margin-top: 11px;
+    margin-bottom: 2px;
+    padding-left: 0%;
+    border: black 2px solid;
+    box-shadow: 10px 5px 5px #5c5252;
+    border-radius: 50%;
+}
+
+/*-------box titre nom----------*/
+.head__titles{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 20px;
+}
+/* titre head nom */
+h1
+{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+/* texte header titre */
+.head__titles__item 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    font-weight: bold;
+    animation: letter 5s linear infinite; /*-------flash 1,2seconde linear infinit------------*/
+}
+/* lettre du titre */
+.head__title__item-letter{
+    animation: letter 60s linear infinite; /*-------flash 1,2seconde linear infinit------------*/ 
+}
+@keyframes letter{
+    0%{
+        color: #484848;
+        text-shadow: 0 0 7px white;
+        
+    }
+    50%{
+        
+    }
+    100%{
+        color:#484848;
+        text-shadow: none;
+        
+    }
+    /* delai effet des lettres */
+}
+/* a */
+.head__title__item-letter:nth-child(1) {
+animation-delay: 1s;
+scale: 1.1;
+}
+/* p */
+.head__title__item-letter:nth-child(2) {
+    animation-delay: 2s;
+    scale: 1.1;
+}
+/* p */
+.head__title__item-letter:nth-child(3) {
+    animation-delay: 3s;
+    scale: 1.1;
+}
+/* r */
+.head__title__item-letter:nth-child(4) {
+animation-delay: 4s;
+scale: 1.1;
+
+}
+/* e */
+.head__title__item-letter:nth-child(5) {
+    animation-delay: 5s;
+    scale: 1.1;
+}
+/* n */
+.head__title__item-letter:nth-child(6) {
+    animation-delay: 6s;
+    scale: 1.1;
+}
+/* t */
+.head__title__item-letter:nth-child(7) {
+    animation-delay: 7s;
+    scale: 1.1;
+}
+/* i */
+.head__title__item-letter:nth-child(8) {
+animation-delay: 8s;
+scale: 1.1;
+}
+/* s */
+.head__title__item-letter:nth-child(9) {
+animation-delay: 9s;
+scale: 1.1;
+}
+
+/* d */
+.head__title__item-letter:nth-child(10) {
+    animation-delay: 11s;
+    }
+    /* é */
+.head__title__item-letter:nth-child(11) {
+    animation-delay: 12s;
+}
+/* v */
+.head__title__item-letter:nth-child(12) {
+    animation-delay: 13s;
+}
+/* e */
+.head__title__item-letter:nth-child(13) {
+animation-delay: 14s;
+}
+/* l */
+.head__title__item-letter:nth-child(14) {
+    animation-delay: 15s;
+}
+/* o */
+.head__title__item-letter:nth-child(15) {
+    animation-delay: 16s;
+}
+/* p */
+.head__title__item-letter:nth-child(16) {
+    animation-delay: 17s;
+}
+/* p */
+.head__title__item-letter:nth-child(17) {
+animation-delay: 18s;
+}
+/* e */
+.head__title__item-letter:nth-child(18) {
+animation-delay: 19s;
+}
+/* u */
+.head__title__item-letter:nth-child(19) {
+animation-delay: 20s;
+}
+/* s */
+.head__title__item-letter:nth-child(20) {
+    animation-delay: 21s;
+}
+/* e */
+.head__title__item-letter:nth-child(21) {
+    animation-delay: 22s;
+}
+/* w */
+.head__title__item-letter:nth-child(22) {
+    animation-delay: 23s;
+}
+/* e */
+.head__title__item-letter:nth-child(23) {
+animation-delay: 24s;
+}
+/* b */
+.head__title__item-letter:nth-child(24) {
+animation-delay: 25s;
+}
+
+/*------box lien------*/
+.head__nav{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 1.5em;
+    padding-right: 5%;
+}
+.head__nav__item{
+    animation: arrow 5s linear infinite;
+}
+@keyframes arrow {
+    0%{
+       
+        scale: 0;
+    }
+    25%{
+        color: black;
+        scale: 1.4;
+    }
+    50%{
+        scale: 1.4;
+    }
+    60%{
+        scale: 2.5;
+    }
+    75%{
+        scale: 2.5;
+    }
+    90%{
+        scale: 2.5;
+        color:black;
+    }
+    95%{
+        scale: 3;
+        color:#A2FAB6;
+    }
+    100%{
+        color: #A2FAB6;
+        scale: 3;
+    }
+}
+/*------lien------*/
+a{
+    text-decoration: none;
+    color: black;
+}
+/*  */
+a:hover{
+    color:purple;
+    text-decoration: underline;
+    
+}
+/*---------------------------------main---------------------main------------------main------------------*/
+/*  ------grand conteneur/ compétence et expérience */
+.skills{
+    display:flex;
+}
+/*------section soft------*/
+/* box compétence */
+.skills__soft{
+    width: 50%;
+    border: black 2px solid;
+    animation: color 60s linear infinite;
+}
+/*  animation changement au survol de couleur  */
+_.skills__soft:focus{
+    transform: scale(1.1);
+    background-color: #f7e2c9;
+}
+/* animation changement de couleur de la section */
+@keyframes color{
+    0%{
+       background-color: #f3d3ad ;
+        
+    }
+    50%{
+        background-color:#f3d3ad;
+        
+    }
+    75%{
+        background-color:antiquewhite;
+    }
+    100%{
+        background-color:antiquewhite; 
+         
+     }
+}
+/* box titre  a propos de moi */
+.skills__soft__box-title{
+    background-color: #afbcac;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 30%;
+    border: black 2px solid;
+    box-shadow: 10px 5px 5px #5c5252;
+    transition: all 450ms;
+    animation: change 60s linear infinite;
+    padding-right: 20px;
+}
+/* changement de couleur au survol */
+.skills__soft__box-title:hover{
+    
+    background-color: rosybrown;
+    transition-delay: 0, 150ms;
+
+    transition: transform linear; 
+}
+/*animation changement de couleur minute */
+@keyframes change{
+    0% { background-color: #afbcac;
+}
+
+    50% {background-color:rgb(25 193 180);
+
+}
+    55%{
+        background-color:#F55BAF;
+    }
+    
+    100%{
+        background-color: rosybrown;
+    }
+}
+/* box clé qui tourne */
+.skills__soft__box-title__box{
+    font-size: 1.5em;
+    font-weight: bold;
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    border: 2px solid antiquewhite;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 0px 0 #5c5252; 
+    margin: 0 20px 0 20px;  
+    background-color: black;
+    animation: flash7 5s linear infinite;  
+}
+/* i  clé*/
+.skills__soft__box-title__box__item{
+    font-weight: bold;
+    font-size: 1.5em;
+}
+/* i animation  clé au survol */
+.skills__soft__box-title__box__item:hover{
+    transform: scale(1.5);
+    background-color: #f7e2c9;
+}
+.keys__box{
+    background-color: black;
+}
+.keys{
+    color: #DCB420;
+}
+.soft__anim{
+    height: 75px;
+    font-size: 1.7em;
+    font-weight: bold;
+}
+.lettre1{
+    color:#484848;
+    animation: flash1 5s linear infinite; /*-------flash 1,2seconde linear infinit------------*/
+    position: relative;
+    
+    
+    font-weight: bold;
+    color: black;
+    
+}
+@keyframes flash1{
+    0%{
+        
+        text-shadow: 0 0 7px wheat;
+    }
+    90%{
+        color:black;
+        text-shadow: none;
+    }
+}
+.lettre1:nth-child(1){ /*------1er enfant de lettre------------*/
+animation-delay: 0.1s;/*-------delai 1seconde ------------*/
+} 
+.lettre1:nth-child(2){ 
+    animation-delay: 0.2s;
+}
+.lettre1:nth-child(3){ 
+    animation-delay: 0.3s;
+}
+.lettre1:nth-child(4){ 
+    animation-delay: 0.4s;
+}
+.lettre1:nth-child(5){ 
+    animation-delay: 0.5s;
+}
+.lettre1:nth-child(6){ 
+    animation-delay: 0.6s;
+}
+.lettre1:nth-child(7){ 
+    animation-delay: 0.7s;
+}
+.lettre1:nth-child(8){ 
+    animation-delay: 0.8s;
+}
+.lettre1:nth-child(9){ 
+    animation-delay: 0.9s;
+}
+.lettre1:nth-child(10){ 
+    animation-delay: 10s;
+}
+/*  soft texte */
+.skills__soft__title__item{
+    padding-left: 3%;
+}
+/* soft texte animation au survol */
+.skills__soft__title__item:hover{
+   transform: scale(1.1);
+    background-color:rgb(0, 255, 221);
+    border: 5px solid black;
+}
+/* liste de compétence */
+.skills__soft__listing:hover{
+    transform: scale(1.1);
+    background-color: #c8f450;
+    border: 5px solid black;
+}
+/* box contact */
+.skills__soft__title__item-box{
+    padding-left: 3%;
+    padding-top: 25px;
+    width: 75%;
+    box-shadow: 10px 5px 5px #5c5252;
+    background-color: #4dafbf;
+    animation: change3 30s linear infinite;
+}
+/* animation au survol */
+.skills__soft__title__item-box:hover{
+    transform: scale(1.1);
+    background-color: #c8f450;
+    border: 5px solid black;
+} 
+@keyframes change3{
+    0%{
+        background-color: #efffc4;
+    }
+    50%{
+        background-color: #efffc4;
+    }
+    75%{
+        background-color:  #fdce13;
+    }
+
+    100%{
+        background-color:  #fdce13;
+    }
+}
+ /* box i et contact */
+.skills__soft__title__item-box__box{
+    display: flex;
+    align-items: center;
+}
+/* i */
+.skills__soft__title__item-box__box-item1{
+    font-weight: bold;
+    box-shadow: 10px 5px 5px #5c5252
+}
+/* contact */
+.skills__soft__title__item-box__box-item2{
+    padding-left: 5%;
+}
+/*----------------------------------section-hards--------------section-hards-------------------section-hards------*/
+/* box expèriences */
+.skills__hards{
+    display: flex;
+    flex-direction: column;
+    margin: 0px;
+    width: 50%;
+    background-color: antiquewhite;
+    border: black 2px solid;
+    animation: color1 60s linear infinite;
+}
+/* animation avec la souris */
+.skills__hards:focus{
+    transform: scale(1.1);
+    background-color: #f7e2c9;
+}
+/* animation inversement de couleur de la section */
+@keyframes color1{
+   
+   
+    0%{
+         background-color:  antiquewhite;
+        
+    }
+    50%{
+        background-color:   antiquewhite;
+         
+     }
+     75%{
+        background-color:  #f3d3ad;
+     }
+     100%{
+        background-color:   #f3d3ad;
+     }
+}
+
+/*  box titre*/
+.skills__hards__box-title{
+
+    width: 100%; 
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    height: 70px;
+}
+
+/* titre */
+.skills__hards__box__title{
+    display: flex;
+    justify-content: center;
+    
+}
+
+/*  titre animation au survol*/
+.skills__hards__box__title:hover{
+    transform: scale(1.2);  
+    color: rgb(77, 105, 79);
+    font-style: oblique;
+    font-size:1.6em ;
+}
+
+/* box année et titre */
+.skills__hards__box__title-box{
+    display: flex;
+    background-color: #c6a57e;
+    font-weight: bold;
+    justify-content: space-evenly;
+    border: black 2px solid;
+    align-items: center;
+    box-shadow: 10px 5px 5px #5c5252;
+    animation: change1 60s linear infinite;   
+}
+/*  animation au survol*/
+.skills__hards__box__title-box:hover{
+
+    background-color: rosybrown;
+    transition-delay: 0, 150ms;
+   
+    transition: transform linear;
+   
+    
+}
+@keyframes change1{
+    
+    0%{
+        background-color: rosybrown;
+    }
+   
+    50%{
+        background-color: rosybrown;
+    }
+    55%{
+        background-color: #69f8a9;
+    }
+    100%{
+        background-color: #69f8a9;
+    }
+}
+/* style i */
+i{
+    font-weight: bold;
+}
+/* box liste de boutique et taches effectuer */
+.skills__hards__box__listing{
+    display: flex;
+}
+/* liste boutique */
+.skills__hards__box__listing-listing{
+    
+    background-color: #efffc4;
+    margin: 0;
+    border: black 2px solid;
+    box-shadow: 10px 5px 5px #5c5252;
+    animation: change5 30s linear infinite;
+}
+/* animation au survol */
+.skills__hards__box__listing-listing:hover{
+    transform: scale(1.1);
+    background-color: #69f8a9;
+    border: 5px solid black;
+}
+@keyframes change5{
+    0%{
+        background-color:  #fdce13;
+    }
+    50%{
+        background-color:  #fdce13;
+    }
+    75%{ 
+       background-color:  #efffc4;
+    }
+
+    100%{
+        background-color:  #efffc4;
+    }
+}
+/* liste de tache */
+.skills__hards__box__listing-listing-1{
+    width: 50%;
+}
+/* animation au survol */
+.skills__hards__box__listing-listing-1:hover{
+    border: 5px black solid;
+    background-color: #579b9b;
+}
+/* liste de tâche vendeuse */
+.skills__hards__box__listing-listing-2{
+    width: 50%;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+/* animation de la liste*/
+.skills__hards__box__listing-listing-2:hover{
+    border: 5px black solid;
+    background-color: #579b9b;
+    scale: 1.2;
+    z-index: 3;
+    margin-right: 25px;
+    width: 40%;
+    
+}
+/* -------------FOOTER-----------------FOOTER-------------------FOOTER-------------------footer---------------------------------- */
+.one{
+    background-color:#FADEC8;
+    animation: change6 60s linear infinite; 
+}
+@keyframes change6{
+
+    0%{
+        background-color: #FADEC8;
+    }
+    50%{
+        background-color: #FADEC8;
+    }
+    55%{
+        background-color: #BEFFFF;
+    }
+    100%{
+        background-color: #BEFFFF;
+    }
+    
+
+}
+/* titre footer */
+
+.foot__title
+    {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rosybrown;
+    height: 70px;
+    font-weight: bold;
+    font-size: 1.5em;
+    border: black 2px solid;
+    margin-top: 0;
+    box-shadow: 10px 5px 5px #5c5252;
+    animation: change4 60s linear infinite;    
+    
+    }
+@keyframes change4{
+        0%{
+            background-color: rosybrown;
+        }
+    
+        50%{
+            background-color: rosybrown;
+        }
+        55%{
+            background-color: rgb(26, 198, 201);
+        }
+        100%{
+            background-color: rgb(26, 198, 201);
+        }
+    }
+/*grande box titre et année */
+.foot__title__items{
+        padding-left: 19%;
+        font-size: 1em;
+        width: 80%;
+        }
+        /* animation grande  box titre et année */
+.foot__title__items:hover{
+            transform: scale(1.1);
+            background-color: rgb(0, 255, 221);
+            width: 80%;
+            border: 5px solid black;
+        }
+        /* box titre et année*/
+.foot__title__items-box{
+        display: flex;
+        align-items: center;
+        font-weight: bold;
+        font-size: 1.1em;
+    
+        }
+        /* box titre et année 2*/
+.foot__title__items-box-items1{
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+            font-size: 1.1em;
+        
+            }
+    /* élément dans box titre et année */
+.foot__title__items-box-item{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-right: 20px;
+    
+    }
+
+    /*élément dans box titre et année 2  */
+.foot__title__items-box-item1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding-right: 20px;
+    }
+/*------------PAGE-2---------------------PAGE-2--------------------PAGE-2--------------------PAGE-2----------------*/
+/*  apparition de la page */
+.accueil{
+    animation:disappear 10s forwards 4s; 
+    transform-origin: center; 
+
+}
+/* conteneur titre et photo */
+.accueil__box{
+    position :fixed;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    _margin-top: 100px; 
+    
+}
+/*  titre du conteneur  */
+.accueil__title{
+    font-size:50px;
+    inset: 15%;
+    /*-------espace entre les lettre------------*/
+    position: relative;  
+    z-index: 4  ;
+    font-weight: bold;
+    color: black;
+    animation:disappear 5s forwards 4s; 
+      
+}
+/* image ESSAIE*/
+.accueil__img{
+    height:100vh;        /*-------toute la taille de l'ecran------------*/
+  
+    position: fixed;        /*-------ne bouge plus------------*/
+      
+    inset: 0;        /*-------remplace top/right/bottom/left------------*/
+  
+    z-index: 3;        /*-------position/superposition------------*/
+  
+    opacity: 0.9;        /*-------transparance------------*/
+  
+    animation:disappear 35s forwards 4s;        /*-------durée d'apparition------------*/
+      
+    transform-origin: bottom; /*-------disparition vers le haut------------*/
+      
+}
+/*  nav */
+.head-nav-link{
+    padding-left: 5%;
+    animation: arrow 5s linear infinite;
+}
+/* body */
+.p2{
+    padding: 40px;
+    font-weight: 400 ;
+    border: 15px solid black;
+    /* font-family: 'Lobster Two', cursive; */
+    /* font-family: 'Roboto', sans-serif; */
+    /* font-family: 'Shrikhand', cursive; */
+    font-family: 'Lobster Two', cursive;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Shrikhand', cursive;
+        
+}
+
+/* header */
+.head-box{
+    height: 500px;
+    display: flex;
+    margin-bottom: 70px;
+    align-items: center;
+}
+/* box nav */
+.head-left-box
+{
+    font-size: 2em;
+    display: flex;
+    align-items: flex-start;
+    height: 475px;
+    width: 60px;
+    position: absolute;
+}
+/*  grand conteneur*/
+.head-big-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+/* box photo */
+.head-box-img{
+    width: 250px;
+    height: 270px;
+    margin-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    margin-top: 100px;
+}
+/* photo */
+.head-img{
+    object-position: bottom;
+    width: 210px;
+    height: 210px;
+    border: 2px solid black;
+    border-radius: 50%;
+    object-fit: fill;
+}
+
+/* grand conteneur avec contact */
+.head-big-box-info
+{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 40%
+}
+/* petit conteneur icone et contact */
+.head-box-info{
+    display: flex;
+    align-items: center;
+}
+/* icone */
+.head-box-info-item{
+    margin: 15px;
+}
+/* contact */
+.head-box-info-item1{
+    margin: 15px;
+}
+.hard2-title{
+    margin-bottom: 35px;
+}
+/*footer  */
+.foot-p2{
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+
+
+
+
+
+

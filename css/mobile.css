@@ -1,0 +1,141 @@
+@media screen and (max-width: 600px){
+    body{
+        min-width: 350px;
+        max-width: 600px;
+        width:100%;
+    }
+    .head{
+        background-color: rosybrown;
+        
+    }
+    _.head__img{
+        display: none;
+    }
+    .head__titles{
+        padding:0;
+        padding-left: 10px;
+        margin-top: 8px;
+    }
+    .head__titles-title{
+        font-size: 1.3em;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-right: 20px;
+    }
+    .head__titles__item{
+        font-size: 1.4em;
+        display: none;
+    }
+    _.lettre{
+        display: none;
+    }
+    h3{
+        font-size: 1em;
+    }
+    .skills{
+        flex-direction: column;
+    }
+    .skills__hards{
+        width: 100%;
+    }
+    .skills__hards__box__title{
+        font-size: 1.3em;
+        padding-left: 50px;
+    }
+    .skills__hards__box__title-box{
+        background-color: #c6a57e;
+    }
+    .titre{
+        background-color: #00e6ff9c;
+    }
+    .skills__hards__box__listing-listing{
+        background-color: #efffc4;
+    }
+    .skills__soft{
+        width: 100%;
+        background-color: #afbcac;
+    }
+    .skills__soft__title__item-box{
+        background-color: #4dafbf;
+    }
+    .soft__box1{
+        display:none
+    }
+    .skills__soft__title{
+        font-size: 1.3em;
+    }
+    .skills__soft__box-title{
+        height: 65px;
+        padding-left: 15px;
+    }
+    _.lettre1{
+        font-size: 1em;
+        letter-spacing: 0.2em;
+        padding: 0;
+    }
+    .keys__box{
+        display: none;
+    
+    }
+    .foot-title{
+        background-color: rosybrown;
+    }
+    .foot--items{
+        width: 100%;
+        padding: 0;   
+    }
+    .foot-items{
+        flex-direction: column;
+        font-size: 1em;
+    }
+    .foot-items1{
+        flex-direction: column;
+        
+    }
+    .foot__title__items-box{
+        flex-direction: column;
+    }
+    .foot__title__title{
+        width: 100%;
+    }
+    .foot__title__items-box-items1{
+        flex-direction: column;
+    }
+    /*------------------page1--------------*/
+    
+    .p2{
+        min-width: 350px;
+        max-width: 600px;
+        width:100%;
+    }
+    .accueil{
+        display:none;
+    }
+    
+    .head-big-box{
+         flex-direction: column;
+        
+    }
+    .head-box-img{
+        width: 200px;
+        height: 200px;
+        margin-left: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .head-img{
+        width: 185px;
+        height: 185px;
+    }
+    .head-big-box-info{
+        margin-top: 40px;
+        width:100%;
+        margin-left: 50px;
+    }
+    _.hard--p2{
+        margin-top: 85px;
+    }
+    }
+    

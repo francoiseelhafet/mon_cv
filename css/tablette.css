@@ -1,0 +1,40 @@
+@media screen and (max-width: 800px){
+
+
+
+    body{
+    
+        min-width: 601px;
+        max-width:800px;
+    }
+    .head{
+        background-color: rgb(218 160 209)
+        
+    }
+    .head:hover{
+        background-color: rosybrown;
+    }
+    .skills__soft__box-title{
+        background-color: #daf2d5;
+    }
+    .skills__soft__box-title__box{
+        padding: 20px;
+        border: 2px solid rgb(77 105 79);
+    }
+    .skills__hards__box__title-box{
+        background-color: #80eed7;
+    }
+    .skills__soft__title__item-box{
+        background-color: #fff900;
+    }
+    .skills__hards__box__listing-listing{
+        background-color: rgb(250 195 167)
+        
+    }
+    .foot-title{
+        background-color: rgb(218 160 209)
+    }
+    .foot--items{
+        width: 95%;
+    }
+    }
